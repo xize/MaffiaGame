@@ -39,6 +39,10 @@ class Salt
         $this->forceLennyFaces($bytes);
         //shuffle with the faces :D
         $this->shuffle($bytes);
+        //add nyancats
+        $this->addNyanCats($bytes);
+        //shuffle the nyancats
+        $this->shuffle($bytes);
         //creating the salt...
         $salt = "";
         foreach($bytes as $byte) {
@@ -89,6 +93,16 @@ class Salt
 
         for($i = 0; $i < $bits; $i++) {
             $array[] = $lennys[rand(0, count($lennys)-1)]; //generate something between 0 to 224 total 225 length, this support ascii to make it very hard to crackdown a password.
+        }
+    }
+
+    private function addNyanCats(&$array) {
+        $bits = floor(count($array) / 99);
+
+        $nyan = "-=[,,_,,]:3";
+
+        for($i = 0; $i < $bits; $i++) {
+            $array[] = $nyan;
         }
     }
 
