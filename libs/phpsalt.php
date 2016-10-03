@@ -2,6 +2,15 @@
 class Salt
 {
 
+    /*
+     * This library is downloaded from https://github.com/xize/phpsalt
+     *
+     * The License is licenced under MIT.
+     * see: https://github.com/xize/phpsalt/LICENSE
+     *
+     * and is written by Guido Lucassen
+     */
+
     private static $generator;
 
     protected function __construct() {} //allow the class to be instanced only by it self.
