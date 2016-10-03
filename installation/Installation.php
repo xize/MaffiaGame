@@ -29,9 +29,6 @@ class Installation
         $safestep = (isset($_GET['step']) ? $_GET['step'] : 0); //avoid NPE by using a safe ternary operator.
 
         switch($safestep) {
-            case 1 || 0:
-                $this->step1->showStep();
-                break;
             case 2:
                 $this->step2->showStep();
                 break;
