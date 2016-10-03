@@ -27,9 +27,7 @@ class Installation
             $this->step3 = new Step3();
 
         $safestep = (isset($_GET['step']) ? $_GET['step'] : 0); //avoid NPE by using a safe ternary operator.
-        if($safestep != 0 || $safestep != 1 || $safestep != 2 || $safestep != 3) { //null check since we cannot use a default case.
-            return;
-        }
+
         switch($safestep) {
             case 1 || 0:
                 $this->step1->showStep();
@@ -40,6 +38,8 @@ class Installation
             case 3:
                 $this->step3->showStep();
                 break;
+            default:
+                $this->step1->showStep();
         }
     }
 
