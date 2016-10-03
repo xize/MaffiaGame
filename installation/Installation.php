@@ -71,7 +71,6 @@ class Step1 implements Step {
     {
         // TODO: Implement showStep() method.
     }
-
 }
 
 class Step2 implements Step {
@@ -80,7 +79,6 @@ class Step2 implements Step {
     {
         // TODO: Implement showStep() method.
     }
-
 }
 
 class Step3 implements Step {
