@@ -1,5 +1,10 @@
 <?php
 
+include_once("Step.php");
+include_once("Step1.php");
+include_once("Step2.php");
+include_once("Step3.php");
+include_once("Step4.php");
 
 class Installation
 {
@@ -50,37 +55,5 @@ class Installation
             return true;
         }
         return false;
-    }
-}
-
-interface Step {
-    /**
-     * shows the step required by this interface
-     *
-     * @return mixed
-     */
-    public function showStep();
-}
-
-class Step1 implements Step {
-
-    public function showStep()
-    {
-        // TODO: Implement showStep() method.
-    }
-}
-
-class Step2 implements Step {
-
-    public function showStep()
-    {
-        // TODO: Implement showStep() method.
-    }
-}
-
-class Step3 implements Step {
-    public function showStep()
-    {
-        // TODO: Implement showStep() method.
     }
 }
